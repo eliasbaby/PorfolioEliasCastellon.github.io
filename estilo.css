@@ -1,4 +1,4 @@
-/* Importamos fuentes de Google Fonts */
+/*  fuentes de Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap');
 
 *{
@@ -22,9 +22,7 @@ body{
   padding: 0 16px;
 }
 
-/* =========================
-   INICIO
-========================= */
+/* INICIO*/
 .inicio{
   color: #fff;
   display: flex;
@@ -104,16 +102,14 @@ body{
   color: #2acf7f;
   font-size: 20px;
   margin: 15px 0;
-  transition: .3s; /* ✅ FIX: antes estaba 3px */
+  transition: .3s;
 }
 
 .inicio .contenedor-redes a:hover i{
   text-shadow: 0 0 20px #91e0ba;
 }
 
-/* =========================
-   MENU DE NAVEGACIÓN
-========================= */
+/*MENU DE NAVEGACIÓN*/
 .navigation{
   width: 400px;
   height: 70px;
@@ -134,11 +130,6 @@ body{
   display: flex;
   width: 350px;
 }
-
-/* IMPORTANTÍSIMO:
-   Este CSS asume que .indicator está DENTRO del ul como hermano de los li,
-   porque usas el selector: li.active ~ .indicator
-*/
 
 .navigation ul li{
   position: relative;
@@ -207,9 +198,7 @@ body{
 .navigation ul li:nth-child(4).active ~ .indicator{ transform: translateX(calc(70px * 3)); }
 .navigation ul li:nth-child(5).active ~ .indicator{ transform: translateX(calc(70px * 4)); }
 
-/* =========================
-   SECCIÓN SOBRE MI
-========================= */
+/*SECCIÓN SOBRE MI */
 .sobre-mi{
   padding: 50px 0 120px; /* + espacio por el menú fijo */
 }
@@ -271,9 +260,7 @@ body{
   margin: 14px 0 18px;
 }
 
-/* =========================
-   EXPERIENCIA Y SERVICIOS
-========================= */
+/*EXPERIENCIA Y SERVICIOS */
 .experiencia{
   padding: 50px 0 120px; /* + espacio por el menú fijo */
 }
@@ -283,7 +270,7 @@ body{
   justify-content: space-between;
   gap: 20px;
   margin-top: 50px;
-  flex-wrap: wrap; /* ✅ ayuda si falta espacio */
+  flex-wrap: wrap; /*  ayuda si falta espacio */
 }
 
 .experiencia .fila .col{
@@ -303,7 +290,7 @@ body{
 .experiencia .fila .col .info{
   display: grid;
   grid-template-columns: auto auto;
-  gap: 20px; /* ✅ FIX: antes grid-gap sin ; */
+  gap: 20px; 
 }
 
 .experiencia .fila .col .info .item{
@@ -323,7 +310,7 @@ body{
   left: 0;
 }
 
-/* ✅ Fix: te dejo .Nivel para que coincida con tu HTML actual */
+
 .experiencia .fila .col .info .item .skill{
   font-weight: bold;
 }
@@ -360,18 +347,13 @@ body{
   line-height: 25px;
 }
 
-/* =========================
-   SECCIONES VACÍAS
-   (si ya no las usas en el HTML, puedes borrar esto)
-========================= */
+/* SECCIONES VACÍAs */
 .seccion-vacia{
   min-height: 60vh;
   padding-bottom: 120px;
 }
 
-/* =========================
-   RESPONSIVE
-========================= */
+/* RESPONSIVE*/
 @media (max-width: 900px){
   .inicio .contenedor-redes{
     position: static;
@@ -397,7 +379,7 @@ body{
     width: 100%;
   }
 
-  /* ✅ RESPONSIVE EXPERIENCIA */
+  /* RESPONSIVE EXPERIENCIA */
   .experiencia .fila{
     flex-direction: column;
   }
