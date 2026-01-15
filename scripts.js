@@ -23,7 +23,7 @@ function setActiveByIndex(index) {
   }
 }
 
-// Click: activar inmediatamente (y dejar que el scroll haga el resto)
+// Click: activar inmediatamente y dejar que el scroll haga el resto)
 navItems.forEach((li, i) => {
   li.addEventListener('click', () => setActiveByIndex(i));
 });
@@ -42,7 +42,7 @@ const observer = new IntersectionObserver((entries) => {
   const index = targets.findIndex(el => el.id === visibleId);
   if (index !== -1) setActiveByIndex(index);
 }, {
-  // Ajusta para que "cuente" como visible cuando entra bien en pantalla
+  // Ajusta para que cuente como visible cuando entra bien en pantalla
   threshold: [0.2, 0.35, 0.5, 0.65],
   rootMargin: "-20% 0px -45% 0px"
 });
