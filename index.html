@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <title>Portafolio</title>
+  <link rel="stylesheet" href="estilo.css" />
+</head>
+
+<body>
+
+  <!-- INICIO -->
+  <section class="inicio contenedor" id="inicio">
+    <h3>Hola, soy</h3>
+    <h1>Elias Castellón</h1>
+    <p>Desarrollador Web Full Stack</p>
+
+    <div class="contenedor-botones">
+      <button class="btn" type="button">Download CV</button>
+      <button class="btn btn2" type="button">Hablemos</button>
+    </div>
+
+    <div class="contenedor-imagen">
+      <img src="img/Profile.png" alt="Foto de perfil" />
+    </div>
+
+    <div class="contenedor-redes">
+      <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+      <a href="#" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+      <a href="#" aria-label="Instagram"><i class="fa-brands fa-square-instagram"></i></a>
+      <a href="#" aria-label="Facebook"><i class="fa-brands fa-square-facebook"></i></a>
+    </div>
+  </section>
+
+  <!-- MENU DE NAVEGACIÓN -->
+  <nav class="navigation" aria-label="Menú principal">
+    <ul>
+      <li class="list active">
+        <a href="#inicio">
+          <span class="icon"><i class="fa-solid fa-house"></i></span>
+          <span class="text">Inicio</span>
+        </a>
+      </li>
+
+      <li class="list">
+        <a href="#sobre-mi">
+          <span class="icon"><i class="fa-solid fa-user"></i></span>
+          <span class="text">Sobre mí</span>
+        </a>
+      </li>
+
+      <li class="list">
+        <a href="#experiencia">
+          <span class="icon"><i class="fa-solid fa-sliders"></i></span>
+          <span class="text">Experiencia</span>
+        </a>
+      </li>
+
+      <li class="list">
+        <a href="#portfolio">
+          <span class="icon"><i class="fa-solid fa-briefcase"></i></span>
+          <span class="text">Portfolio</span>
+        </a>
+      </li>
+
+      <li class="list">
+        <a href="#contacto">
+          <span class="icon"><i class="fa-solid fa-envelope"></i></span>
+          <span class="text">Contacto</span>
+        </a>
+      </li>
+
+      <!-- indicador dentro del UL -->
+      <div class="indicator" aria-hidden="true"></div>
+    </ul>
+  </nav>
+
+  <!-- SOBRE MÍ -->
+  <section class="sobre-mi contenedor" id="sobre-mi">
+    <h2 class="titulo-seccion">Sobre mí</h2>
+
+    <div class="fila">
+      <div class="col contenedor-imagen-sobre">
+        <img src="img/Profile2.png" alt="Foto sobre mí" />
+      </div>
+
+      <div class="col info">
+        <div class="contenedor-boxs">
+          <div class="box">
+            <p>Experiencia</p>
+            <p class="num">+5 años</p>
+          </div>
+
+          <div class="box">
+            <p>Clientes</p>
+            <p class="num">+100 satisfechos</p>
+          </div>
+
+          <div class="box">
+            <p>Proyectos</p>
+            <p class="num">+50 completados</p>
+          </div>
+        </div>
+
+        <p class="presentacion">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+          Neque repudiandae vitae sequi ab tempore aliquid a, ea ex nostrum iste illum?
+          Exercitationem quam sed velit dolore facere alias soluta adipisci!
+        </p>
+
+        <button class="btn btn2" type="button">Contáctame ahora</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCIA -->
+  <section class="experiencia contenedor" id="experiencia">
+    <h2 class="titulo-seccion">Experiencia</h2>
+
+    <div class="fila">
+      <!-- Front-End -->
+      <div class="col">
+        <h3>Desarrollador Front-End</h3>
+        <div class="info">
+          <div class="item">
+            <i class="fa-solid fa-circle-check"></i>
+            <span class="skill">HTML</span>
+            <span class="Nivel">Experimentado</span>
+          </div>
+
+          <div class="item">
+            <i class="fa-solid fa-circle-check"></i>
+            <span class="skill">CSS</span>
+            <span class="Nivel">Experimentado</span>
+          </div>
+
+          <div class="item">
+            <i class="fa-solid fa-circle-check"></i>
+            <span class="skill">JavaScript</span>
+            <span class="Nivel">Experimentado</span>
+          </div>
+
+          <div class="item">
+            <i class="fa-solid fa-circle-check"></i>
+            <span class="skill">Tailwind CSS</span>
+            <span class="Nivel">Experimentado</span>
+          </div>
+
+          <div class="item">
+            <i class="fa-solid fa-circle-check"></i>
+            <span class="skill">React</span>
+            <span class="Nivel">Experimentado</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Back-End -->
+      <div class="col">
+        <h3>Desarrollador Back-End</h3>
+        <div class="info">
+          <div class="item">
+            <i class="fa-solid fa-circle-check"></i>
+            <span class="skill">Node.js</span>
+            <span class="Nivel">Experimentado</span>
+          </div>
+
+          <div class="item">
+            <i class="fa-solid fa-circle-check"></i>
+            <span class="skill">MongoDB</span>
+            <span class="Nivel">Experimentado</span>
+          </div>
+
+          <div class="item">
+            <i class="fa-solid fa-circle-check"></i>
+            <span class="skill">PHP</span>
+            <span class="Nivel">Experimentado</span>
+          </div>
+
+          <div class="item">
+            <i class="fa-solid fa-circle-check"></i>
+            <span class="skill">MySQL</span>
+            <span class="Nivel">Experimentado</span>
+          </div>
+
+          <div class="item">
+            <i class="fa-solid fa-circle-check"></i>
+            <span class="skill">Java</span>
+            <span class="Nivel">Experimentado</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SERVICIOS -->
+    <div class="fila">
+      <div class="servicio">
+        <h2 class="titulo">Diseño UX/UI</h2>
+        <ul>
+          <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+          <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+          <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+          <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+          <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+        </ul>
+      </div>
+
+      <div class="servicio">
+        <h2 class="titulo">Desarrollo web</h2>
+        <ul>
+          <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+          <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+          <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+          <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+          <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+          <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+          <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+        </ul>
+      </div>
+
+      <div class="servicio">
+        <h2 class="titulo">Creación de contenido</h2>
+        <ul>
+          <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+          <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+          <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+          <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+          <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+          <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+          <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- PORTFOLIO -->
+  <section class="portafolio contenedor" id="portfolio">
+    <h2 class="titulo-seccion">Portfolio</h2>
+
+    <div class="fila">
+      <div class="item">
+        <img src="img/Profile2.png" alt="Proyecto 1" />
+        <p class="descripcion">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime iure unde voluptatum,
+          temporibus voluptatem nam veritatis hic fuga optio accusamus. Vel assumenda laboriosam blanditiis magni,
+          pariatur qui delectus dolores reprehenderit?
+        </p>
+
+        <div class="contenedor-botones">
+          <button class="btn" type="button">GitHub</button>
+          <button class="btn" type="button">Ver Demo</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section class="contacto contenedor" id="contacto">
+    <h2 class="titulo-seccion">Contacto</h2>
+
+    <div class="fila">
+      <div class="col">
+        <div class="item">
+          <i class="fa-solid fa-envelope"></i>
+          <span>EMAIL</span>
+          <span>ibcrelias03@gmail.com</span>
+          <a href="mailto:ibcrelias03@gmail.com">Enviar un mensaje</a>
+        </div>
+
+        <div class="item">
+          <i class="fa-brands fa-facebook-messenger"></i>
+          <span>MESSENGER</span>
+          <span>ibcrelias03@gmail.com</span>
+          <a href="#" target="_blank" rel="noopener">Enviar un mensaje</a>
+        </div>
+
+        <div class="item">
+          <i class="fa-brands fa-square-whatsapp"></i>
+          <span>WHATSAPP</span>
+          <span>12345678</span>
+          <a href="https://wa.me/50612345678" target="_blank" rel="noopener">Enviar un mensaje</a>
+        </div>
+      </div>
+
+      <div class="col formulario">
+        <form action="#" method="post">
+          <input type="text" name="nombre" placeholder="Ingresa tu nombre" required />
+          <input type="email" name="correo" placeholder="Ingresa tu correo" required />
+          <textarea name="mensaje" cols="30" rows="10" placeholder="Mensaje" required></textarea>
+          <button class="btn btn2" type="submit">Enviar mensaje</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER (corregido) -->
+  <footer class="footer">
+    <span>CODIGO WEB</span>
+
+    <nav class="footer-links" aria-label="Enlaces del pie de página">
+      <a href="#inicio">Inicio</a>
+      <a href="#sobre-mi">Sobre mí</a>
+      <a href="#experiencia">Experiencia</a>
+      <a href="#portfolio">Portafolio</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+</html>

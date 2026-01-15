@@ -1,0 +1,542 @@
+/* Importamos fuentes de Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Oxygen', sans-serif;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+body{
+  background-color: #20252d;
+}
+
+.contenedor{
+  max-width: 1100px;
+  margin: auto;
+  padding: 0 16px;
+}
+
+/* =========================
+   INICIO
+========================= */
+.inicio{
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 40px 0 120px; /* + espacio por el menú fijo */
+}
+
+.inicio h3{
+  padding: 5px 0;
+}
+
+.inicio h1{
+  color: #2acf7f;
+  font-size: 40px;
+  padding: 5px 0;
+}
+
+.inicio p{
+  padding: 20px 0;
+  letter-spacing: 5px;
+  text-align: center;
+}
+
+.inicio .contenedor-botones{
+  padding: 30px 0;
+  margin-bottom: 30px;
+}
+
+.btn{
+  background-color: transparent;
+  padding: 15px 18px;
+  border: 1px solid #2acf7f;
+  border-radius: 10px;
+  display: inline-block;
+  margin: 0 10px;
+  cursor: pointer;
+  transition: .3s;
+  color: #fff;
+}
+
+.btn2{
+  background-color: #2acf7f;
+  color: #161b22;
+  cursor: pointer;
+}
+
+.btn:hover{
+  box-shadow: 0 0 20px #91e0ba;
+}
+
+.inicio .contenedor-imagen{
+  background: linear-gradient(#2acf7f, transparent);
+  max-width: 400px;
+  border-radius: 210px 210px 0 0;
+  overflow: hidden;
+}
+
+.inicio .contenedor-imagen img{
+  width: 100%;
+  display: block;
+  margin: auto;
+  padding: 80px 20px 0 20px;
+}
+
+.inicio .contenedor-redes{
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.inicio .contenedor-redes a{
+  display: block;
+  color: #2acf7f;
+  font-size: 20px;
+  margin: 15px 0;
+  transition: .3s; /* ✅ FIX: antes estaba 3px */
+}
+
+.inicio .contenedor-redes a:hover i{
+  text-shadow: 0 0 20px #91e0ba;
+}
+
+/* =========================
+   MENU DE NAVEGACIÓN
+========================= */
+.navigation{
+  width: 400px;
+  height: 70px;
+  background: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  position: fixed;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+}
+
+.navigation ul{
+  position: relative;
+  display: flex;
+  width: 350px;
+}
+
+/* IMPORTANTÍSIMO:
+   Este CSS asume que .indicator está DENTRO del ul como hermano de los li,
+   porque usas el selector: li.active ~ .indicator
+*/
+
+.navigation ul li{
+  position: relative;
+  list-style: none;
+  width: 70px;
+  height: 70px;
+  z-index: 1;
+}
+
+.navigation ul li a{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.navigation ul li a i{
+  position: relative;
+  display: block;
+  line-height: 75px;
+  font-size: 1.5em;
+  text-align: center;
+  transition: .5s;
+  color: #fff;
+}
+
+.navigation ul li.active a i{
+  transform: translateY(-35px);
+}
+
+.navigation ul li a .text{
+  position: absolute;
+  color: #3f516f;
+  font-size: .75em;
+  letter-spacing: .05em;
+  transition: .5s;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.navigation ul li.active a .text{
+  opacity: 1;
+  transform: translateY(10px);
+  color: #fff;
+}
+
+.indicator{
+  background-color: #2acf7f;
+  width: 70px;
+  height: 70px;
+  position: absolute;
+  top: -50%;
+  left: 0;
+  border-radius: 50%;
+  transition: .5s;
+}
+
+.navigation ul li:nth-child(1).active ~ .indicator{ transform: translateX(calc(70px * 0)); }
+.navigation ul li:nth-child(2).active ~ .indicator{ transform: translateX(calc(70px * 1)); }
+.navigation ul li:nth-child(3).active ~ .indicator{ transform: translateX(calc(70px * 2)); }
+.navigation ul li:nth-child(4).active ~ .indicator{ transform: translateX(calc(70px * 3)); }
+.navigation ul li:nth-child(5).active ~ .indicator{ transform: translateX(calc(70px * 4)); }
+
+/* =========================
+   SECCIÓN SOBRE MI
+========================= */
+.sobre-mi{
+  padding: 50px 0 120px; /* + espacio por el menú fijo */
+}
+
+.titulo-seccion{
+  text-align: center;
+  color: #2acf7f;
+  padding: 60px 0 30px;
+}
+
+.sobre-mi .fila{
+  display: flex;
+  gap: 30px;
+  padding: 30px 0;
+  align-items: center;
+}
+
+.sobre-mi .fila .col{
+  width: 50%;
+}
+
+/* Imagen de sobre mi */
+.contenedor-imagen-sobre img{
+  width: min(400px, 100%);
+  border: 5px solid #2acf7f;
+  border-radius: 12px;
+  display: block;
+}
+
+/* Cajas */
+.sobre-mi .fila .info .contenedor-boxs{
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 18px;
+}
+
+.sobre-mi .fila .info .box{
+  flex: 1;
+  min-width: 140px;
+  background-color: #161b22;
+  border: 1px solid #2acf7f;
+  border-radius: 12px;
+  padding: 14px;
+  text-align: center;
+  color: #fff;
+}
+
+.sobre-mi .fila .info .num{
+  color: #2acf7f;
+  font-weight: 700;
+  font-size: 18px;
+  margin-top: 6px;
+}
+
+.presentacion{
+  color: #cbd5e1;
+  line-height: 1.6;
+  margin: 14px 0 18px;
+}
+
+/* =========================
+   EXPERIENCIA Y SERVICIOS
+========================= */
+.experiencia{
+  padding: 50px 0 120px; /* + espacio por el menú fijo */
+}
+
+.experiencia .fila{
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 50px;
+  flex-wrap: wrap; /* ✅ ayuda si falta espacio */
+}
+
+.experiencia .fila .col{
+  width: 48%;
+  background-color: #161b22;
+  border: 1px solid #2acf7f;
+  padding: 20px 40px;
+  border-radius: 12px;
+}
+
+.experiencia .fila .col h3{
+  color: #91e0ba;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.experiencia .fila .col .info{
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 20px; /* ✅ FIX: antes grid-gap sin ; */
+}
+
+.experiencia .fila .col .info .item{
+  color: #fff;
+  position: relative;
+}
+
+.experiencia .fila .col .info .item span{
+  display: block;
+  margin-left: 25px;
+}
+
+.experiencia .fila .col .info .item i{
+  position: absolute;
+  color: #2acf7f;
+  top: 4px;
+  left: 0;
+}
+
+/* ✅ Fix: te dejo .Nivel para que coincida con tu HTML actual */
+.experiencia .fila .col .info .item .skill{
+  font-weight: bold;
+}
+
+.experiencia .fila .col .info .item .Nivel{
+  color: #91e0ba;
+  margin-top: 7px;
+}
+
+/* SERVICIOS */
+.experiencia .fila .servicio{
+  width: 30%;
+  background-color: #161b22;
+  border: 1px solid #2acf7f;
+  border-radius: 12px;
+  color: #fff;
+  overflow: hidden;
+}
+
+.experiencia .fila .servicio .titulo{
+  background-color: #91e0ba;
+  color: #161b22;
+  text-align: center;
+  padding: 20px 10px;
+  font-size: 18px;
+}
+
+.experiencia .fila .servicio ul{
+  padding: 15px 20px 20px;
+}
+
+.experiencia .fila .servicio ul li{
+  margin: 10px 0;
+  line-height: 25px;
+}
+
+/* =========================
+   SECCIONES VACÍAS
+   (si ya no las usas en el HTML, puedes borrar esto)
+========================= */
+.seccion-vacia{
+  min-height: 60vh;
+  padding-bottom: 120px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 900px){
+  .inicio .contenedor-redes{
+    position: static;
+    transform: none;
+    display: flex;
+    gap: 14px;
+    margin-top: 18px;
+  }
+
+  .inicio .contenedor-redes a{ 
+    margin: 0; 
+  }
+
+  .navigation{
+    width: 92%;
+  }
+
+  .sobre-mi .fila{
+    flex-direction: column;
+  }
+
+  .sobre-mi .fila .col{
+    width: 100%;
+  }
+
+  /* ✅ RESPONSIVE EXPERIENCIA */
+  .experiencia .fila{
+    flex-direction: column;
+  }
+
+  .experiencia .fila .col,
+  .experiencia .fila .servicio{
+    width: 100%;
+  }
+
+  .experiencia .fila .col{
+    padding: 20px;
+  }
+
+  .experiencia .fila .col .info{
+    grid-template-columns: 1fr;
+  }
+}
+/* Portafolio */
+.portafolio .fila{
+  display: grid;
+  grid-template-columns: 340px 340px 340px;
+  grid-gap: 20px;
+}
+
+.portafolio .fila .item{
+  background-color: #161b22;
+  padding: 25px;
+  margin-bottom: 30px;
+  border-radius: 30px;
+}
+.portafolio .fila .item img{
+  width: 100%;
+  display: block;
+  margin: auto;
+  border-radius: 30px;
+}
+.portafolio .fila .item p{
+  color: #fff;
+  margin: 0px;
+
+}
+/* Contacto*/
+.contacto .fila{
+  display: flex;
+  color: #fff;
+}
+.contacto .col .item{
+  background-color: #161b22;
+  padding: 30px 40px;
+  text-align: center;
+  margin-bottom: 30px;
+  border-radius: 20px;
+}
+.contacto .col .item span{
+  display: block;
+  margin: 7px;
+}
+.contacto .col .item a{
+  text-decoration: none;
+  color: #91e0ba;
+  margin-top: 10px;
+  display: inline-block;
+}
+.contacto .formulario{
+  padding-left: 100px;
+  width: 100%;
+}
+.contacto .formulario input, .contacto .formulario textarea{
+display: block;
+background-color: transparent;
+border: none;
+border: 1px solid #2acf7f;
+padding: 25px 20px;
+border-radius: 10px;
+color: #fff;
+width: 100%;
+margin-bottom: 20px;
+outline: none;
+}
+/*footer*/
+footer{
+  background-color: #3f516f;
+  text-align: center;
+  padding: 100px 0 120px 0;
+  margin-top: 0px;
+}
+footer span{
+  display: block;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+footer a{
+  text-decoration: none;
+  color: #91e0ba;
+  display: inline-block;
+  margin: 0 30px;
+}
+/*Seccion responsive*/
+@media only screen and (max-width:1000px){
+  .contenedor{
+    padding: 0 20px;
+  }
+  .portafolio .fila{
+    grid-template-columns: auto auto;
+  }
+  @media only screen and (max-widh:800px){
+  .sobre-mi .fila{
+    display: block;
+  }
+  .sobre-mi .fila .col{
+    width: 100%;
+    margin: 20px;
+  }
+  }
+  .experiencia .fila{
+    display: block;
+  }
+  .experiencia .fila .col{
+    width: 100%;
+    margin: auto;
+  }
+  .experiencia .fila .servicio{
+    width: 100%;
+    display: block;
+    margin-bottom:20px;
+  }
+  .portafolio .fila{
+    grid-template-columns: auto;
+  } 
+  .contacto .fila{
+    display: block;
+  }
+  .contacto .formulario{
+    padding-left: 0;
+  }
+  footer a{
+    display: block;
+  }
+}
+
+
+
